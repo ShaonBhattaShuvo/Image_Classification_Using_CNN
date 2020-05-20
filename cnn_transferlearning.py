@@ -2,7 +2,7 @@
 """
 Created on Tue Mar  3 16:09:22 2020
 
-@author: Shaon
+@author: Shaon Bhatta Shuvo
 """
 #import tensorflow as tf
 #from tensorflow.keras.applications.inception_v3 import InceptionV3
@@ -177,7 +177,9 @@ predictions = Dense(4, activation='softmax')(x)
 # this is the model we will train
 model = Model(inputs=base_model.input, outputs=predictions)
 
-model.summary()
+#printing the model summary 
+#model.summary()
+
 # first: train only the top layers (which were randomly initialized)
 # i.e. freeze all convolutional InceptionV3 layers
 #for layer in base_model.layers:
